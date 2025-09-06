@@ -1,0 +1,79 @@
+/* login.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    color: #2e7d32; /* green */
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 12px 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #2e7d32;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+form button:nth-child(3) { /* Change Password button */
+    background-color: #66bb6a;
+}
+
+form button:nth-child(3):hover {
+    background-color: #43a047;
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

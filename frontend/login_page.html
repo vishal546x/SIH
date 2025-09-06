@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+   
+    <form id="loginForm">
+         <h2>Login</h2>
+        User ID: <input type="text" id="userid"><br><br>
+        <div class="password-container">
+            Password: <input type="password" id="password">
+            <span class="toggle-eye" onclick="togglePassword()">👁️</span>
+        </div>
+        <div id="error"></div><br>
+        <button type="button" onclick="login()">Login</button>
+        <button type="button" onclick="changePage()">Change Password</button>
+    </form>
+
+    <script>
+        let currentPassword = localStorage.getItem("password") || "rmkec123";
+
+        function togglePassword() {
+            const pass = document.getElementById('password');
+            pass.type = pass.type === "password" ? "text" : "password";
+        }
+
+        function login() {
+            const user = document.getElementById('userid').value;
+            const pass = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error');
+
+            if(user === 'baka' && pass === currentPassword) {
+                window.location.href = "home.html";
+            } else {
+                errorDiv.innerText = "Invalid User ID or Password";
+            }
+        }
+
+        function changePage() {
+            window.location.href = "change_password.html";
+        }
+    </script>
+</body>
+</html>
